@@ -1,5 +1,6 @@
 {
   "name": "walking-books",
+  "proxy":"http://localhost:300",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
