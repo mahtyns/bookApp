@@ -1,0 +1,1 @@
+export const LoginText = 'Log in to your account.'

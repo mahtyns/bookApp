@@ -23,12 +23,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
   background-color: var(--main-white);
-  height: 200px;
-  width: 200px;
 }
 
 .logo {
@@ -38,4 +37,9 @@ body {
 
 .logo .secondary {
   color: var(--red)
+}
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }

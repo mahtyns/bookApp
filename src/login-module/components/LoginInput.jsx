@@ -3,10 +3,12 @@ import React from 'react'
 
 const LoginInput = props => {
   return (
-    <>
-    <label>Label</label>
-    <input placeholder='input' />
-    </>
+    <div className='login-form'>
+    <label>
+      {props.labelTag}
+    </label>
+    <input placeholder={props.labelTag} />
+    </div>
   )
 }
 

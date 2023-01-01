@@ -1,0 +1,29 @@
+:root {
+  --main-background: #ebe3d1;
+  --main-white: #fdfdfd;
+  --main-fonts: #12272a;
+  --main-yellow: #bc8242;
+  --green: #5b753f;
+  --red: #ba422a;
+  --inactive: #969491;
+}
+
+.buttonMain {
+    border:none;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 6px;
+    margin: 20px 0
+}
+
+.confirm {
+    background-color: var(--green);
+    color: var(--main-white);
+    font-weight: 400;
+}
+
+.fullWidth {
+    width: 100%;
+    font-size: 22px;
+    letter-spacing: 1.1px;
+}
