@@ -14,6 +14,7 @@ const Texts = props => {
   },
   {
     'main': props.textColor === 'main',
+    'invert': props.textColor === 'invert',
     'alert': props.textColor === 'alert',
     'success': props.textColor === 'success',
     'inactive': props.textColor === 'inactive'

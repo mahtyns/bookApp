@@ -12,18 +12,14 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
 }
 
 .App {
   background-color: var(--main-background);
   color: var(--main-fonts);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
 
 .container {
@@ -48,11 +44,34 @@ body {
 .navbar {
   background-color: var(--main-fonts);
   color: var(--main-white);
-  width: 100%;
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
   align-items: center;
-  padding: 25px 20px
+  padding: 25px 20px;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.navbar-logo {
+  width: 33%;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+}
+
+.navbar-links .mainText {
+  margin: 3px 10px
+}
+
+.navbar-interaction {
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

@@ -10,11 +10,15 @@
 
 .mainText {
     font-weight: 400;
-    margin: 2px
+    margin: 3px
 }
 
 .mainText.medium {
     font-size: 16px;
+}
+
+.mainText.large {
+    font-size: 20px;
 }
 
 .main {
@@ -23,4 +27,8 @@
 
 .success {
     color: var(--green)
+}
+
+.invert {
+    color: var(--main-white);
 }
