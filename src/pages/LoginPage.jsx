@@ -1,11 +1,11 @@
 import React from 'react'
-import LoginModule from '../login-module/LoginModule'
+import RegisterModule from '../login-module/RegisterModule'
 import '../styles/RegisterLoginStyles.css'
 
 const LoginPage = () => {
   return (
     <div className='container login-container'>
-        <LoginModule />
+        <RegisterModule />
     </div>
   )
 }

@@ -7,16 +7,50 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, .15);
+}
+
+.login-logo {
+    margin: 20px 0;
 }
 
 .login-text {
     font-size: 20px;
     text-align: center;
-    margin: 10px 0;
+    margin: 6px 0;
 }
 
 .login-form {
     width: 350px;
     display: flex;
     flex-direction: column;
+}
+
+.login-form > input {
+    border: 1px solid #5b753f;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 10px 0
+}
+
+.login-form > input::placeholder {
+    color: #969491;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.login-switch {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-checkbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.login-checkbox > input {
+    height: 18px;
+    width: 18px;
+    border: #5b753f72 solid;
 }

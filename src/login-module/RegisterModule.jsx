@@ -1,14 +1,38 @@
 import React from 'react'
+import Logo from '../shared-elements/components/Logo'
+import Copytext from './components/Copytext'
+import { LoginText } from '../resources/textContents'
+import LoginInput from '../login-module/components/LoginInput'
+import Button from '../shared-elements/Button'
+import Texts from '../shared-elements/Texts'
+import Checkbox from './components/Checkbox'
 // import PropTypes from 'prop-types'
 
 const RegisterModule = props => {
   return (
-    <div>
-        
-    </div>
+    <>
+      <div className='login-logo'>
+        <Logo logoSize='main' />
+        <Copytext textContent={LoginText} />
+      </div>
+      <div className="login-form">
+        <form>
+        <LoginInput labelTag='Name' required/>
+        <LoginInput labelTag='Email' required />
+        <LoginInput labelTag='Password' required />
+        <LoginInput labelTag='Confirm password' required />
+        <Checkbox />
+        <Button buttonText='Register' buttonSize='fullWidth' buttonColor='confirm' />
+        </form>
+      </div>
+      <div className='login-switch'>
+        <Texts textContent={"I don't have an account -"} textSize="medium" textColor="main" />
+        <Texts textContent={"Register here"} textSize="medium" textColor="success" />
+      </div>
+    </>
   )
 }
 
-// RegisterModule.propTypes = {}
+// LoginModule.propTypes = {}
 
 export default RegisterModule

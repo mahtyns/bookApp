@@ -13,7 +13,8 @@
     text-transform: uppercase;
     padding: 10px 30px;
     border-radius: 6px;
-    margin: 20px 0
+    margin: 20px 0;
+    cursor: pointer;
 }
 
 .confirm {

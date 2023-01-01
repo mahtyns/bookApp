@@ -4,6 +4,7 @@ import Copytext from './components/Copytext'
 import { LoginText } from '../resources/textContents'
 import LoginInput from '../login-module/components/LoginInput'
 import Button from '../shared-elements/Button'
+import Texts from '../shared-elements/Texts'
 // import PropTypes from 'prop-types'
 
 const LoginModule = props => {
@@ -14,13 +15,15 @@ const LoginModule = props => {
       <Copytext textContent={LoginText}/>
     </div>
     <div className="login-form">
-        <LoginInput labelTag='Email'/>
-        <LoginInput labelTag='Password'/>
-        <Button buttonText='Log In' buttonSize='fullWidth' buttonColor='confirm'/>
+      <form>
+        <LoginInput labelTag='Email' required/>
+        <LoginInput labelTag='Password' required />
+        <Button buttonText='Enter' buttonSize='fullWidth' buttonColor='confirm'/>
+      </form>  
     </div>
-    <div>
-      <Copytext textContent="I don't have an account" />
-      <Copytext textContent="Log in" />
+    <div className='login-switch'>
+      <Texts textContent={"I don't have an account -"} textSize="medium" textColor="main" />
+      <Texts textContent={"Register here"} textSize="medium" textColor="success" />
     </div>
     </>
   )

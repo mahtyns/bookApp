@@ -1,0 +1,26 @@
+:root {
+  --main-background: #ebe3d1;
+  --main-white: #fdfdfd;
+  --main-fonts: #12272a;
+  --main-yellow: #bc8242;
+  --green: #5b753f;
+  --red: #ba422a;
+  --inactive: #969491;
+}
+
+.mainText {
+    font-weight: 400;
+    margin: 2px
+}
+
+.mainText.medium {
+    font-size: 16px;
+}
+
+.main {
+    color: var(--main-fonts) ;
+}
+
+.success {
+    color: var(--green)
+}

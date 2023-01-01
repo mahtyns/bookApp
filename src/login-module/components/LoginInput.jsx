@@ -4,9 +4,6 @@ import React from 'react'
 const LoginInput = props => {
   return (
     <div className='login-form'>
-    <label>
-      {props.labelTag}
-    </label>
     <input placeholder={props.labelTag} />
     </div>
   )
