@@ -11,6 +11,7 @@
 ## Process
 1. Setting up the app & project structure ✅
 2. Login page setup ▶️
+3. Main Page setup ▶️
 
 <!-- ## Available Scripts
 

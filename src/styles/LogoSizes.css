@@ -9,3 +9,7 @@
 .logo.large {
     font-size: 60px;
 }
+
+.logo.invert {
+  color: var(--main-white)
+}

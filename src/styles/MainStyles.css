@@ -39,7 +39,20 @@ body {
   color: var(--red)
 }
 
+
 .text {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+}
+
+.navbar {
+  background-color: var(--main-fonts);
+  color: var(--main-white);
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 25px 20px
 }

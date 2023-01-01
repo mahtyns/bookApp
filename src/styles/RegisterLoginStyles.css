@@ -1,5 +1,5 @@
 .login-container {
-    height: 680px;
+    height: 620px;
     width: 500px;
     border-radius: 18px;
     padding: 30px 30px;
@@ -11,7 +11,11 @@
 }
 
 .login-logo {
-    margin: 20px 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-text {
@@ -29,7 +33,6 @@
 .login-form > input {
     border: 1px solid #5b753f;
     padding: 10px;
-    border-radius: 6px;
     margin: 10px 0
 }
 

@@ -8,6 +8,9 @@ const Logo = (props) => {
     'main': props.logoSize === 'main',
     'small': props.logoSize === 'small',
     'large': props.logoSize === 'large'
+  },
+  {
+    'invert': props.logoInvert === true
   })
 
   return (
