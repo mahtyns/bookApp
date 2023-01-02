@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from './components/Logo'
 import Texts from './Texts'
 import { Link } from 'react-router-dom'
+import ProfilePicture from './components/ProfilePicture'
 // import PropTypes from 'prop-types'
 
 const Header = props => {
@@ -26,7 +27,9 @@ const Header = props => {
             </div>
             <div className="navbar-interaction">
                 <div>Search</div>
-                <div>Profile</div>
+              <Link to='/user' >  
+                <ProfilePicture />
+              </Link>  
             </div>
           </div>      
     </nav>
