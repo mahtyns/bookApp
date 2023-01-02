@@ -3,8 +3,10 @@ import '../styles/RegisterLoginStyles.css'
 
 const LoginPage = props => {
   return (
-    <div className='container login-container'>
+    <div className='app-wrapper'>
+      <div className='container login-container'>
         {props.moduleContent}
+      </div>
     </div>
   )
 }

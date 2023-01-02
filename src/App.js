@@ -1,17 +1,18 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
 import {ReactQueryDevtools} from 'react-query/devtools'
-import RegisterModule from './login-module/RegisterModule';
-import LoginPage from './pages/LoginPage';
-import MainPage from './pages/MainPage';
+import MainRoutes from './MainRoutes';
+import { BrowserRouter } from 'react-router-dom'
 
 const appQueryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={appQueryClient}>
+      <BrowserRouter>
         <div className="App">
-            <MainPage />
+            <MainRoutes />
         </div>
+        </BrowserRouter>
       <ReactQueryDevtools initialIsOpen='false' />
     </QueryClientProvider>  
   );

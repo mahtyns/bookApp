@@ -5,6 +5,7 @@ import { LoginText } from '../resources/textContents'
 import LoginInput from '../login-module/components/LoginInput'
 import Button from '../shared-elements/Button'
 import Texts from '../shared-elements/Texts'
+import { Link } from 'react-router-dom'
 // import PropTypes from 'prop-types'
 
 const LoginModule = props => {
@@ -23,7 +24,9 @@ const LoginModule = props => {
     </div>
     <div className='login-switch'>
       <Texts textContent={"I don't have an account -"} textSize="medium" textColor="main" />
+      <Link to='/register'>
       <Texts textContent={"Register here"} textSize="medium" textColor="success" />
+      </Link>
     </div>
     </>
   )

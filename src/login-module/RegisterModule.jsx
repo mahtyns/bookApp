@@ -6,6 +6,7 @@ import Button from '../shared-elements/Button'
 import Texts from '../shared-elements/Texts'
 import Checkbox from './components/Checkbox'
 import { RegisterText } from '../resources/textContents'
+import { Link } from 'react-router-dom'
 // import PropTypes from 'prop-types'
 
 const RegisterModule = props => {
@@ -27,7 +28,9 @@ const RegisterModule = props => {
       </div>
       <div className='login-switch'>
         <Texts textContent={"I already have an account -"} textSize="medium" textColor="main" />
+        <Link to='/login'>
         <Texts textContent={"Log in here"} textSize="medium" textColor="success" />
+        </Link>
       </div>
     </>
   )

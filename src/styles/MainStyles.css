@@ -14,12 +14,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a, a:visited {
+  text-decoration: none;
+}
+
+
 .App {
   background-color: var(--main-background);
   color: var(--main-fonts);
   min-height: 100vh;
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
+}
+
+.app-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
@@ -74,4 +86,22 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+.footer {
+  background-color: var(--red);
+  color: var(--main-white);
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer  a:visited {
+  text-decoration: none;
+  color: var(--main-white);
 }

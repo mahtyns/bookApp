@@ -1,6 +1,5 @@
 import React from 'react'
 // import { useQuery } from 'react-query'
-import Header from '../shared-elements/Header'
 
 const MainPage = () => {
 
@@ -16,9 +15,8 @@ const MainPage = () => {
     // console.log(data)
 
   return (
-    <div>
-      <Header />      
-
+    <div className='container'>
+       X X X 
     </div>
   )
 }
