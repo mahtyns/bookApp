@@ -11,6 +11,7 @@ import RegisterModule from './login-module/RegisterModule'
 import BookLibraryPage from './pages/BookLibraryPage'
 import FriendsPage from './pages/FriendsPage'
 import BookMapPage from './pages/BookMapPage'
+import ExplorePage from './pages/ExplorePage'
 
 const MainRoutes = () => {
 
@@ -35,6 +36,7 @@ const MainRoutes = () => {
                   <Route path='/library' element={<BookLibraryPage />} />
                   <Route path='/bookmap' element={<BookMapPage />} />
                   <Route path='/friends' element={<FriendsPage />} />
+                  <Route path='/explore' element={<ExplorePage />} />
               </Routes>      
             <Footer />      
     </>

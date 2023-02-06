@@ -3,6 +3,7 @@ import Logo from './components/Logo'
 import Texts from './Texts'
 import { Link } from 'react-router-dom'
 import ProfilePicture from './components/ProfilePicture'
+import SearchBar from './components/SearchBar'
 // import PropTypes from 'prop-types'
 
 const Header = props => {
@@ -15,6 +16,9 @@ const Header = props => {
               </Link>
             </div>
             <div className="navbar-links">
+                <Link to='/explore'>
+                  <Texts textContent={'Explore'} textSize='large' textColor='invert'/>
+                </Link>
                 <Link to='/library'>
                   <Texts textContent={'Your Library'} textSize='large' textColor='invert'/>
                 </Link>
@@ -26,7 +30,7 @@ const Header = props => {
                 </Link>
             </div>
             <div className="navbar-interaction">
-                <div>Search</div>
+                  <SearchBar />
               <Link to='/user' >  
                 <ProfilePicture />
               </Link>  

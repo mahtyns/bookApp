@@ -8,6 +8,10 @@
   --inactive: #969491;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -86,6 +90,7 @@ a, a:visited {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer {

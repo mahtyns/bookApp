@@ -1,3 +1,13 @@
+:root {
+  --main-background: #ebe3d1;
+  --main-white: #fdfdfd;
+  --main-fonts: #12272a;
+  --main-yellow: #bc8242;
+  --green: #5b753f;
+  --red: #ba422a;
+  --inactive: #969491;
+}
+
 .profile-picture {
     width: 48px;
     height: 48px;
@@ -7,4 +17,20 @@
 .profile-picture img {
     width: inherit;
     height: inherit;
+}
+
+.search-bar {
+    width: 80%;
+    height: 24px;
+    background-color: rgba(255,255,255,.1);
+    border: none;
+    padding: 5px 16px;
+    border-radius: 20px;
+}
+
+.search-bar::placeholder {
+    color: var(--main-white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    
 }
