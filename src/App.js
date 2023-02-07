@@ -1,20 +1,23 @@
-import { QueryClient, QueryClientProvider } from 'react-query'
+// import { useQuery} from 'react-query'
 import {ReactQueryDevtools} from 'react-query/devtools'
 import MainRoutes from './MainRoutes';
 import { BrowserRouter } from 'react-router-dom'
+import BOOKS_API from './API'
 
-const appQueryClient = new QueryClient();
 
 function App() {
+
+  console.log(BOOKS_API())
+
   return (
-    <QueryClientProvider client={appQueryClient}>
+    <>
       <BrowserRouter>
         <div className="App">
             <MainRoutes />
         </div>
         </BrowserRouter>
       <ReactQueryDevtools initialIsOpen='false' />
-    </QueryClientProvider>  
+    </>
   );
 }
 

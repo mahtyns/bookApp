@@ -7,7 +7,7 @@
  - React query
  - classnames
 ## Resources
-
+ - example data - Draftbit 
 ## Process
 1. Setting up the app & project structure ✅
 2. Login page setup ▶️
