@@ -102,11 +102,45 @@ a, a:visited {
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
-  position: absolute;
-  bottom: 0;
+  
 }
 
 .footer  a:visited {
   text-decoration: none;
   color: var(--main-white);
+}
+
+
+.containersMain {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-evenly;
+  margin: 2em 0;
+}
+
+.containersLeft {
+  width: 25.5em;
+  height: 40.5em;
+  background-color: var(--main-white);
+  border-radius: 20px;
+  padding: 4em 3em
+}
+
+.containersRight {
+  width: 86.5em;
+  height: 95%;
+  background-color: var(--main-white);
+  border-radius: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 4em 5em
+}
+
+.containersRight::-webkit-scrollbar{
+  width: 10px;
+  background-color: var(--inactive);
+  
 }

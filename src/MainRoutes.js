@@ -13,7 +13,7 @@ import FriendsPage from './pages/FriendsPage'
 import BookMapPage from './pages/BookMapPage'
 import ExplorePage from './pages/ExplorePage'
 
-const MainRoutes = () => {
+const MainRoutes = props => {
 
   // const [isLogged, setIsLogged] = useState(false)
   const isLogged = true;
@@ -36,7 +36,7 @@ const MainRoutes = () => {
                   <Route path='/library' element={<BookLibraryPage />} />
                   <Route path='/bookmap' element={<BookMapPage />} />
                   <Route path='/friends' element={<FriendsPage />} />
-                  <Route path='/explore' element={<ExplorePage />} />
+                  <Route path='/explore' element={<ExplorePage bookData={props.bookData} />} />
               </Routes>      
             <Footer />      
     </>

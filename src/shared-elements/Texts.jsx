@@ -19,6 +19,9 @@ const Texts = props => {
     'success': props.textColor === 'success',
     'inactive': props.textColor === 'inactive'
 
+  },
+  {
+    'decorFont': props.fontStyle === 'decorFont'
   })
     
   return (

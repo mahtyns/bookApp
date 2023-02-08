@@ -1,4 +1,3 @@
-// import { useQuery} from 'react-query'
 import {ReactQueryDevtools} from 'react-query/devtools'
 import MainRoutes from './MainRoutes';
 import { BrowserRouter } from 'react-router-dom'
@@ -7,13 +6,13 @@ import BOOKS_API from './API'
 
 function App() {
 
-  console.log(BOOKS_API())
+  const book_data = BOOKS_API();
 
   return (
     <>
       <BrowserRouter>
         <div className="App">
-            <MainRoutes />
+            <MainRoutes bookData={book_data} />
         </div>
         </BrowserRouter>
       <ReactQueryDevtools initialIsOpen='false' />

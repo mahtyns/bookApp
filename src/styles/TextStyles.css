@@ -21,6 +21,10 @@
     font-size: 20px;
 }
 
+.mainText.xlarge {
+    font-size: 36px;
+}
+
 .main {
     color: var(--main-fonts) ;
 }
@@ -31,4 +35,9 @@
 
 .invert {
     color: var(--main-white);
+}
+
+.decorFont {
+  font-family: 'DM Serif Display', serif;
+  letter-spacing: 2px;
 }
