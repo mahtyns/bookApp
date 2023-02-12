@@ -1,0 +1,47 @@
+:root {
+  --main-background: #ebe3d1;
+  --main-white: #fdfdfd;
+  --main-fonts: #12272a;
+  --main-yellow: #bc8242;
+  --green: #5b753f;
+  --red: #ba422a;
+  --inactive: #969491;
+}
+
+.bookCatalogContainer {
+  margin: 3em 0 3em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5em;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.bookDetailsCoverImg {
+  width: 300px;
+  height: 300px;
+}
+
+.bookElementContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.bookDetailsCoverImg img {
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
+}
+/* 
+.bookElDescriptionContainer {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 6;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  
+} */

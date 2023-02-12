@@ -9,10 +9,12 @@
 }
 
 .mainText {
-    font-weight: 400;
     margin: 3px
 }
 
+.mainText.small {
+    font-size: 14px;
+}
 .mainText.medium {
     font-size: 16px;
 }
@@ -36,8 +38,15 @@
 .invert {
     color: var(--main-white);
 }
+.inactive {
+    color: var(--inactive);
+}
 
 .decorFont {
   font-family: 'DM Serif Display', serif;
   letter-spacing: 2px;
+}
+
+.boldText {
+    font-weight: 800;
 }

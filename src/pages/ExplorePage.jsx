@@ -1,15 +1,19 @@
-import React, { useEffect} from 'react'
+// import React, { useEffect} from 'react'
+import BookCatalog from '../explore-module/BookCatalog'
 import Containers from '../shared-elements/Containers'
 // import PropTypes from 'prop-types'
 
 const ExplorePage = props => {
 
-  useEffect(()=> {}, [])
+  // useEffect(()=> {}, [])
 
   return (
     <>
-      <Containers containerRight_Content={null} titleSectionRight={'Explore latest'} titleSectionLeft={'Your stats'}/>
-      <button onClick={()=> console.log(props.bookData)}>Click</button>
+      <Containers containerRight_Content={<BookCatalog 
+      bookDetails={props.bookData}
+      />} 
+      titleSectionRight={'Explore the latest'} 
+      titleSectionLeft={'Your books'}/>
     </>
   )
 }

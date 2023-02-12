@@ -22,6 +22,9 @@ const Texts = props => {
   },
   {
     'decorFont': props.fontStyle === 'decorFont'
+  },
+  {
+    'boldText': props.textWeight === 'boldText'
   })
     
   return (

@@ -139,8 +139,13 @@ a, a:visited {
   padding: 4em 5em
 }
 
-.containersRight::-webkit-scrollbar{
-  width: 10px;
-  background-color: var(--inactive);
+/* .containersRight::-webkit-scrollbar{
+  background-color: var(--main-yellow);
+  width: 6px;
+  position: absolute;
+  right: 5px;
   
 }
+.containersRight::-webkit-scrollbar-track{
+  background-color: var(--main-yellow);
+} */

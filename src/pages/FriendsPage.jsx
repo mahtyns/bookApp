@@ -1,9 +1,11 @@
 import React from 'react'
+import Containers from '../shared-elements/Containers'
+
 // import PropTypes from 'prop-types'
 
 const FriendsPage = props => {
   return (
-    <div>FriendsPage</div>
+    <Containers containerRight_Content={null} titleSectionRight={`Friends' activity`} titleSectionLeft={'Your books'} />
   )
 }
 

@@ -1,4 +1,6 @@
 import React from 'react'
+import Containers from '../shared-elements/Containers'
+
 // import { useQuery } from 'react-query'
 
 const MainPage = () => {
@@ -15,9 +17,7 @@ const MainPage = () => {
     // console.log(data)
 
   return (
-    <div className='container'>
-       X X X 
-    </div>
+    <Containers containerRight_Content={null} titleSectionRight={'Welcome back'} titleSectionLeft={'Your books'} />
   )
 }
 
