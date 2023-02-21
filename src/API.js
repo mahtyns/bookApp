@@ -1,6 +1,6 @@
 import { useQuery} from 'react-query'
 
-const API_BOOKS_URL = "https://example-data.draftbit.com/books?_limit=10"
+const API_BOOKS_URL = "https://example-data.draftbit.com/books?_limit=30"
 
 const BOOKS_API = () => {
 
