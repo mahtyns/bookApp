@@ -13,7 +13,8 @@ const ExplorePage = props => {
       bookDetails={props.bookData}
       />} 
       titleSectionRight={'Explore the latest'} 
-      titleSectionLeft={'Your books'}/>
+      titleSectionLeft={'Your books'}
+    />
     </>
   )
 }

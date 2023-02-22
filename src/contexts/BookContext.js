@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
-const AppContext = React.createContext();
+export const BookContext = React.createContext();
 
+export const BookProvider = ({ contents }) => {
+    const [usersBooks, setUsersBooks] = useState([]);
 
+    const addBook = (bookSelected) => {
+        setUsersBooks([...usersBooks, bookSelected]);
+    }
 
-export default AppContext
+    const removeBook = (bookSelected) => {
+        setUsersBooks(usersBooks.filter(book => book.id !== bookSelected.id))
+    }
+
+    return (
+        <BookContext.Provider value={{ usersBooks, addBook, removeBook }}> 
+            {contents}            
+        </BookContext.Provider>
+    )
+}

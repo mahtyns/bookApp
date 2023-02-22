@@ -10,12 +10,14 @@ function App() {
 
   return (
     <>
+   
       <BrowserRouter>
         <div className="App">
             <MainRoutes bookData={book_data} />
         </div>
         </BrowserRouter>
       <ReactQueryDevtools initialIsOpen='false' />
+    
     </>
   );
 }

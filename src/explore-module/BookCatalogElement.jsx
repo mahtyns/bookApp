@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Texts from '../shared-elements/Texts'
 import '.././styles/ExploreBooksCatalogStyles.css'
 import Button from '../shared-elements/Button'
+import { BookContext } from '../contexts/BookContext'
 // import PropTypes from 'prop-types'
 
 const BookCatalogElement = props => {
+  const addBook = useContext(BookContext)
+
   return (
     <div className='bookElementContainer'>
         <div className='bookDetailsCoverImg'>
@@ -19,7 +22,7 @@ const BookCatalogElement = props => {
             <Texts textContent={`Pages: ${props.bookDetails.num_pages}`} textSize={'medium'} />
             <Texts textContent={`Rating: ${props.bookDetails.rating}`} textSize={'medium'} />
             <Texts textContent={`Genres: ${props.bookDetails.genres}`} textSize={'small'} textColor={'inactive'}/>
-            <Button buttonColor={'confirm'} buttonText={'Add to your library'}/>
+            <Button buttonColor={'confirm'} buttonText={'Add to your library'} onClick={()=>addBook(props.bookDetails)} />
         </div>
     </div>
   )
