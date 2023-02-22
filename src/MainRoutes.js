@@ -36,7 +36,7 @@ const MainRoutes = props => {
                   <Route path='/library' element={<BookLibraryPage />} />
                   <Route path='/bookmap' element={<BookMapPage />} />
                   <Route path='/friends' element={<FriendsPage />} />
-                  <Route path='/explore' element={<ExplorePage bookData={props.bookData} />} />
+                  <Route path='/explore' element={<ExplorePage />} />
               </Routes>      
             <Footer />      
     </>

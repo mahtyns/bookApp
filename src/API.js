@@ -1,8 +1,8 @@
 import { useQuery} from 'react-query'
 
-const API_BOOKS_URL = "https://example-data.draftbit.com/books?_limit=30"
+export const API_BOOKS_URL = "https://example-data.draftbit.com/books?_limit=30"
 
-const BOOKS_API = () => {
+export const BOOKS_API = () => {
 
     const { isLoading, error, data } = useQuery('books', async () =>
         await fetch(API_BOOKS_URL).then(res =>
@@ -16,4 +16,3 @@ const BOOKS_API = () => {
     return data
 }
 
-export default BOOKS_API

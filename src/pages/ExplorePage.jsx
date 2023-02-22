@@ -1,16 +1,19 @@
 // import React, { useEffect} from 'react'
 import BookCatalog from '../explore-module/BookCatalog'
 import Containers from '../shared-elements/Containers'
+import useBookApi from '../hooks/useBookAPI'
+import { API_BOOKS_URL } from '../API'
 // import PropTypes from 'prop-types'
 
 const ExplorePage = props => {
 
-  // useEffect(()=> {}, [])
+  const books = useBookApi(API_BOOKS_URL)
 
   return (
     <>
       <Containers containerRight_Content={<BookCatalog 
-      bookDetails={props.bookData}
+      // bookDetails={props.bookData}
+      bookDetails={books}
       />} 
       titleSectionRight={'Explore the latest'} 
       titleSectionLeft={'Your books'}
