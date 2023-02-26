@@ -42,6 +42,10 @@
     color: var(--inactive);
 }
 
+.alert {
+ color: var(--red)
+}
+
 .decorFont {
   font-family: 'DM Serif Display', serif;
   letter-spacing: 2px;

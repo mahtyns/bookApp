@@ -32,7 +32,7 @@ const Header = props => {
             <div className="navbar-interaction">
                   <SearchBar />
               <Link to='/user' >  
-                <ProfilePicture />
+                <ProfilePicture imgSize={'small'}/>
               </Link>  
             </div>
           </div>      
