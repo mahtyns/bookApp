@@ -119,6 +119,7 @@ a, a:visited {
   align-items: top;
   justify-content: space-evenly;
   margin: 2em 0;
+  column-gap: 1em;
 }
 
 .containersLeft {

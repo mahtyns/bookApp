@@ -2,8 +2,8 @@ import {ReactQueryDevtools} from 'react-query/devtools'
 import MainRoutes from './MainRoutes';
 import { BrowserRouter } from 'react-router-dom'
 
-
 function App() {
+
 
   return (
     <>

@@ -12,8 +12,8 @@ const ExplorePage = props => {
   return (
     <>
       <Containers containerRight_Content={<BookCatalog 
-      // bookDetails={props.bookData}
       bookDetails={books}
+      addBookToLibrary={props.addBookToLibrary}
       />} 
       titleSectionRight={'Explore the latest'} 
       titleSectionLeft={'Your books'}

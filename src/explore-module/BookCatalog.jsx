@@ -8,7 +8,7 @@ const BookCatalog = props => {
 
   return (
     <div className='bookCatalogContainer'>
-      {props.bookDetails.map(bookDet => <BookCatalogElement bookDetails={bookDet} />)}
+      {props.bookDetails.map(bookDet => <BookCatalogElement addBookToLibrary={props.addBookToLibrary} bookDetails={bookDet} />)}
     </div>
   )
 }

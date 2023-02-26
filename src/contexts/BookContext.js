@@ -1,21 +1,19 @@
-import React, { useState } from "react";
+import { createContext, useState } from "react";
 
-export const BookContext = React.createContext();
+export const BookContext = createContext();
 
 export const BookProvider = ({ contents }) => {
-    const [usersBooks, setUsersBooks] = useState([]);
+  const [userLibrary, setUserLibrary] = useState([]);
 
-    const addBook = (bookSelected) => {
-        setUsersBooks([...usersBooks, bookSelected]);
-    }
+  const addBookToLibrary = (bookAdded) => {
+      setUserLibrary([...userLibrary, bookAdded])
+      console.log(userLibrary)
+  }
 
-    const removeBook = (bookSelected) => {
-        setUsersBooks(usersBooks.filter(book => book.id !== bookSelected.id))
-    }
+  return (
+    <BookContext.Provider value={{userLibrary, addBookToLibrary}} >
+        {contents}
+    </BookContext.Provider>
+  )
 
-    return (
-        <BookContext.Provider value={{ usersBooks, addBook, removeBook }}> 
-            {contents}            
-        </BookContext.Provider>
-    )
 }

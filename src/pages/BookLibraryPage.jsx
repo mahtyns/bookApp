@@ -5,7 +5,7 @@ import Containers from '../shared-elements/Containers'
 
 const BookLibraryPage = props => {
   return (
-    <Containers containerRight_Content={null} titleSectionRight={'Your library'} titleSectionLeft={'Your books'} />
+    <Containers containerRight_Content={null} titleSectionRight={'Your library'} titleSectionLeft={'Stats'} />
   )
 }
 

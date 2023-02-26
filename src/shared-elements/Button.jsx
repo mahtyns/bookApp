@@ -19,7 +19,7 @@ const Button = props => {
   } )  
 
   return (
-    <button className={buttonStyles}>
+    <button className={buttonStyles} onClick={()=>props.handleClick()}>
         { props.buttonText }
     </button>
   )

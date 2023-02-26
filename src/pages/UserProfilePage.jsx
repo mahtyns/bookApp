@@ -5,7 +5,7 @@ import Containers from '../shared-elements/Containers'
 
 const UserProfilePage = props => {
   return (
-    <Containers containerRight_Content={null} titleSectionRight={'Your books'} titleSectionLeft={'About you'} />
+    <Containers containerRight_Content={null} titleSectionRight={'Account settings'} titleSectionLeft={'About you'} />
   )
 }
 
