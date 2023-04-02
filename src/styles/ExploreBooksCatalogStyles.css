@@ -20,6 +20,8 @@
   gap: 2em;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--inactive-bg);
 }
 
 
@@ -29,12 +31,23 @@
   object-fit: contain;
 }
 
-/* 
-.bookElDescriptionContainer {
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  line-clamp: 6;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
-  
-} */
+.catalog-buttons {
+  display: flex;
+  gap: 1em;
+  position: relative;
+  ;
+}
+
+/* Add to your library popup  */
+
+.addLibBtnContainer {
+  width: 300px;
+  height: 250px;
+  border-radius: 20px;
+  /* background-color: var(--main-white); */
+  background-color: wheat;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

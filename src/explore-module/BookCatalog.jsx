@@ -1,14 +1,33 @@
-import React from 'react'
 import BookCatalogElement from './BookCatalogElement'
 import '.././styles/ExploreBooksCatalogStyles.css'
+import {useContext} from 'react'
+import {UserLibContext} from '../contexts/BookContext'
+
+// import AddBookPopup from './components/AddBookPopup'
 
 const BookCatalog = props => {
 
-  return (
-    <div className='bookCatalogContainer'>
-      {props.bookDetails.map(bookDet => <BookCatalogElement key={bookDet.id} addBookToLibrary={props.addBookToLibrary} bookDetails={bookDet} />)}
-    </div>
-  )
+    const {userLibrary} = useContext(UserLibContext)
+    const {setUserLibrary} = useContext(UserLibContext)
+
+    const addBookToLibrary = (book) => {
+        setUserLibrary([
+            ...userLibrary,
+            book
+        ])
+    }
+
+    return (
+        <div className='bookCatalogContainer'>
+            {props
+                .bookDetails
+                .map(bookDet => <BookCatalogElement
+                    addBookToLibrary={addBookToLibrary}
+                    key={bookDet.id}
+                    bookDetails={bookDet}/>)}
+            {/* <AddBookPopup /> */}
+        </div>
+    )
 }
 
 // BookCatalog.propTypes = {}

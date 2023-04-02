@@ -1,15 +1,18 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import '.././styles/UserStyles.css'
 import UserBookCatalogElement from './UserBookCatalogElement'
-
-// import PropTypes from 'prop-types'
+import {UserLibContext} from '../contexts/BookContext'
 
 const UserBookCatalog = props => {
-  return (
-    <div className='userBookCatalogContainer'>
-        {props.userLibrary.map(book => <UserBookCatalogElement key={book.title} bookDetails={book}/>)}
-    </div>
-  )
+
+    const {userLibrary} = useContext(UserLibContext)
+
+    return (
+        <div className='userBookCatalogContainer'>
+            { userLibrary ? <div>{userLibrary.map((book, index) => <UserBookCatalogElement key={index} bookDetails={book}/>)}</div>
+                : <div>You have no books</div>}
+        </div>
+    )
 }
 
 // UserBookCatalog.propTypes = {}

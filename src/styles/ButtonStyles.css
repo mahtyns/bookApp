@@ -9,10 +9,15 @@
     cursor: pointer;
 }
 
-.confirm {
+.buttonMain.confirm {
     background-color: var(--green);
     color: var(--main-white);
     font-weight: 400;
+}
+
+.buttonMain.inactive {
+    background-color: var(--inactive-bg);
+    color: var(--inactive)
 }
 
 .fullWidth {
