@@ -7,7 +7,7 @@ import UserBookCatalogElement from './UserBookCatalogElement'
 const UserBookCatalog = props => {
   return (
     <div className='userBookCatalogContainer'>
-        {props.userLibrary.map(book => <UserBookCatalogElement bookDetails={book}/>)}
+        {props.userLibrary.map(book => <UserBookCatalogElement key={book.title} bookDetails={book}/>)}
     </div>
   )
 }

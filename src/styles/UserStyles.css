@@ -1,12 +1,4 @@
-:root {
-  --main-background: #ebe3d1;
-  --main-white: #fdfdfd;
-  --main-fonts: #12272a;
-  --main-yellow: #bc8242;
-  --green: #5b753f;
-  --red: #ba422a;
-  --inactive: #969491;
-}
+@import './MainStyles.css';
 
 .profile-picture.small {
     width: 48px;
@@ -18,6 +10,7 @@
     width: 100px;
     height: 100px;
 }
+
 .profile-picture.large {
     width: 150px;
     height: 150px;
@@ -28,29 +21,35 @@
     height: inherit;
 }
 
+
+
 .search-bar {
     width: 80%;
     height: 24px;
-    background-color: rgba(255,255,255,.1);
+    background-color: rgba(255, 255, 255, .1);
     border: none;
     padding: 5px 16px;
     border-radius: 20px;
+}
+
+.search-bar.mobile {
+    width: 60%;
 }
 
 .search-bar::placeholder {
     color: var(--main-white);
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    
+
 }
 
 .userBookCatalogContainer {
-  margin: 3em 0 3em 0;
-  display: flex;
-  flex-direction: column;
-  gap: 3.5em;
-  align-items: flex-start;
-  justify-content: center;
+    margin: 3em 0 3em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5em;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 
@@ -74,8 +73,4 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.bookDetailsCoverImg {
-
 }

@@ -40,7 +40,7 @@ const MainRoutes = props => {
 
   else return (
      <>
-     <BookContext.Provider >
+     <BookContext.Provider value={null} >
             <Header /> 
               <Routes>
                   <Route path='/' element={<MainPage />} />

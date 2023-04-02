@@ -5,7 +5,7 @@
   --main-yellow: #bc8242;
   --green: #5b753f;
   --red: #ba422a;
-  --inactive: #969491;
+  --inactive: #c1c0be;
 }
 
 * {
@@ -18,7 +18,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 
@@ -44,7 +45,7 @@ a, a:visited {
 
 .logo {
   font-family: 'DM Serif Display', serif;
-  color:var(--main-fonts);
+  color: var(--main-fonts);
 }
 
 .logo .secondary {
@@ -93,6 +94,17 @@ a, a:visited {
   align-items: center;
 }
 
+.navbar-interaction.mobile {
+  width: 25%;
+  justify-content: flex-end;
+}
+
+.burgerMenu-img img {
+  width: 48px;
+  height: 48px;
+  margin: 0 10px;
+}
+
 .footer {
   background-color: var(--red);
   color: var(--main-white);
@@ -102,10 +114,10 @@ a, a:visited {
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
-  
+
 }
 
-.footer  a:visited {
+.footer a:visited {
   text-decoration: none;
   color: var(--main-white);
 }
@@ -150,3 +162,45 @@ a, a:visited {
 .containersRight::-webkit-scrollbar-track{
   background-color: var(--main-yellow);
 } */
+
+/* Side Menu settings  */
+
+.side-menu {
+  width: 400px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--main-yellow);
+}
+
+.side-wrapper {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close img {
+  width: 48px;
+  height: 48px;
+}
+
+.side-interaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.side-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+}

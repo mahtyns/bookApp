@@ -1,12 +1,4 @@
-:root {
-  --main-background: #ebe3d1;
-  --main-white: #fdfdfd;
-  --main-fonts: #12272a;
-  --main-yellow: #bc8242;
-  --green: #5b753f;
-  --red: #ba422a;
-  --inactive: #969491;
-}
+@import './MainStyles.css';
 
 .mainText {
     margin: 3px
@@ -15,6 +7,7 @@
 .mainText.small {
     font-size: 14px;
 }
+
 .mainText.medium {
     font-size: 16px;
 }
@@ -28,7 +21,7 @@
 }
 
 .main {
-    color: var(--main-fonts) ;
+    color: var(--main-fonts);
 }
 
 .success {
@@ -38,17 +31,18 @@
 .invert {
     color: var(--main-white);
 }
+
 .inactive {
     color: var(--inactive);
 }
 
 .alert {
- color: var(--red)
+    color: var(--red)
 }
 
 .decorFont {
-  font-family: 'DM Serif Display', serif;
-  letter-spacing: 2px;
+    font-family: 'DM Serif Display', serif;
+    letter-spacing: 2px;
 }
 
 .boldText {

@@ -1,12 +1,4 @@
-:root {
-  --main-background: #ebe3d1;
-  --main-white: #fdfdfd;
-  --main-fonts: #12272a;
-  --main-yellow: #bc8242;
-  --green: #5b753f;
-  --red: #ba422a;
-  --inactive: #969491;
-}
+@import './MainStyles.css';
 
 .bookCatalogContainer {
   margin: 3em 0 3em 0;
@@ -36,6 +28,7 @@
   height: inherit;
   object-fit: contain;
 }
+
 /* 
 .bookElDescriptionContainer {
   text-overflow: ellipsis;
