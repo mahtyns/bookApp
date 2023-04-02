@@ -22,22 +22,35 @@
 }
 
 
-
 .search-bar {
     width: 80%;
-    height: 24px;
-    background-color: rgba(255, 255, 255, .1);
+    height: 36px;
     border: none;
     padding: 5px 16px;
     border-radius: 20px;
+}
+
+.search-bar.darkVersion {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.search-bar.lightVersion {
+    background-color: var(--inactive-bg);
 }
 
 .search-bar.mobile {
     width: 60%;
 }
 
-.search-bar::placeholder {
+.search-bar.darkVersion::placeholder {
     color: var(--main-white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
+}
+
+.search-bar.lightVersion::placeholder {
+    color: var(--inactive);
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
 
@@ -72,5 +85,57 @@
 .statsElement {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* user Library  */
+
+.userBookList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.userBookCatalogElemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--inactive-bg);
+    padding: 2em 1em;
+}
+
+.userBookWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3em
+}
+
+.userBooksCount {
+    display: flex;
+    flex-direction: row;
+    gap: 1em
+}
+
+.userBookOptions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3em
+}
+
+.userBooksMiniature {
+    width: 7em;
+}
+
+.userBooksMiniature img {
+    width: inherit;
+}
+
+.userBooksStatus {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }

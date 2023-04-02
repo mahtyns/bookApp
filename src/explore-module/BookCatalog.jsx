@@ -10,11 +10,18 @@ const BookCatalog = props => {
     const {userLibrary} = useContext(UserLibContext)
     const {setUserLibrary} = useContext(UserLibContext)
 
+    const checkIfExists = (index) => {
+        const isRepeatedItem = userLibrary.find(element => element.id === index)
+        return isRepeatedItem
+    }
+
     const addBookToLibrary = (book) => {
-        setUserLibrary([
-            ...userLibrary,
-            book
-        ])
+        if (!checkIfExists(book.id)) {
+            setUserLibrary([
+                ...userLibrary,
+                book
+            ])
+        } else console.log('This item is already in your library')
     }
 
     return (

@@ -62,7 +62,7 @@ const Header = () => {
                         </Link>
                     </div> 
                         <div className={`navbar-interaction ${textSizesChange ? '' : 'mobile'}`} > 
-                        <SearchBar textChange={textSizesChange}/> 
+                        <SearchBar textChange={textSizesChange} placeholder={'Search for books...'} version={'dark'} /> 
                         <Link to = '/user' > 
                             <ProfilePicture imgSize={'small'}/> 
                         </Link>
