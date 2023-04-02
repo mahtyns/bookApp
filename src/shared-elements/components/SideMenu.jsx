@@ -3,8 +3,21 @@ import ProfilePicture from './ProfilePicture'
 import SearchBar from './SearchBar'
 import { Link } from 'react-router-dom'
 import Texts from '../Texts'
+import { UserLoginContext } from '../../contexts/LoginContext'
+import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const SideMenu = (props) => {
+
+    const {setLogged} = useContext(UserLoginContext)
+
+    const navigate = useNavigate()
+
+    const handleLogOut = () => {
+        setLogged(false);
+        navigate('/login')
+    }
+
     return (
         <div className="side-menu">
             <div className="side-wrapper">
@@ -40,6 +53,11 @@ const SideMenu = (props) => {
                             textSize={'large'}
                             textColor='invert' />
                     </Link>
+                    <Texts
+                        textContent={'Log out'}
+                        textSize={'large'}
+                        textColor='invert' 
+                        handleClick={()=> handleLogOut()}/>
                 </div>
                 <div className="side-interaction">
                     <SearchBar />

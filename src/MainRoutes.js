@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import Footer from './shared-elements/Footer'
 import Header from './shared-elements/Header'
 import MainPage from './pages/MainPage'
@@ -12,14 +12,12 @@ import FriendsPage from './pages/FriendsPage'
 import BookMapPage from './pages/BookMapPage'
 import ExplorePage from './pages/ExplorePage'
 import { UserLibContext } from './contexts/BookContext'
-
-
+import { UserLoginContext } from './contexts/LoginContext'
 
 
 const MainRoutes = props => {
 
-  // const [isLogged, setIsLogged] = useState(false)
-  const isLogged = true;
+  const {isLogged} = useContext(UserLoginContext);
 
   const [userLibrary, setUserLibrary] = useState([]);
 
@@ -33,12 +31,13 @@ const MainRoutes = props => {
       </Routes>
   )
 
-  else return (
+  if (isLogged)
+  return  (
      <>
      <UserLibContext.Provider value={{userLibrary, setUserLibrary}} >
             <Header /> 
               <Routes>
-                  <Route path='/' element={<MainPage />} />
+                  <Route path='/home' element={<MainPage />} />
                   <Route path='/user' element={<UserProfilePage />} />
                   <Route path='/library' element={<BookLibraryPage userLibrary={userLibrary} />} />
                   <Route path='/bookmap' element={<BookMapPage />} />

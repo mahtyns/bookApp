@@ -13,10 +13,8 @@ const UserBookCatalogElement = props => {
           <div>
               <Texts textContent={props.bookDetails.title} textSize={'large'} textWeight={'boldText'} />
               <Texts textContent={props.bookDetails.authors} textSize={'medium'} textColor={'inactive'} />
-
               <Texts textContent={`Pages: ${props.bookDetails.num_pages}`} textSize={'medium'} />
               <Texts textContent={`Rating: ${props.bookDetails.rating}`} textSize={'medium'} />
-              <Texts textContent={`Genres: ${props.bookDetails.genres}`} textSize={'small'} textColor={'inactive'} />
 
           </div>
     </div>
