@@ -39,14 +39,33 @@
 
 /* Add to your library popup  */
 
-.addLibBtnContainer {
+.addLibPopupContainer {
   width: 300px;
-  height: 250px;
+  height: 150px;
   border-radius: 20px;
-  /* background-color: var(--main-white); */
-  background-color: wheat;
+  background-color: var(--main-white);
   z-index: 100;
   position: absolute;
   top: 0;
   left: 0;
+  padding: 0 1.3em;
+  box-shadow: 0px 2px 10px var(--inactive);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.addLibPopupContainer select {
+  width: 90%;
+  height: 2em;
+  border-radius: 25px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--main-fonts);
+}
+
+.addLibPopupCTAs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  width: 50%;
 }

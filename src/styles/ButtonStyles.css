@@ -3,9 +3,16 @@
 .buttonMain {
     border: none;
     text-transform: uppercase;
-    padding: 12px 30px;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.buttonMain.large {
+    padding: 12px 30px;
+}
+
+.buttonMain.small {
+    padding: 6px 15px;
 }
 
 .buttonMain.confirm {

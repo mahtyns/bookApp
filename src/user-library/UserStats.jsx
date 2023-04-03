@@ -10,6 +10,10 @@ const UserStats = props => {
 
     const {userLibrary} = useContext(UserLibContext)
 
+    const readBooks = userLibrary.filter((element) => element.status === 'read')
+    const wantReadBooks = userLibrary.filter((element) => element.status === 'wtr')
+    const readingBooks = userLibrary.filter((element) => element.status === 'reading')
+
     return (
         <div className='userStatsContainer'>
             <div className='userStatsPicture'>
@@ -28,22 +32,22 @@ const UserStats = props => {
 
                 <div className="statsElement">
                     <Texts textContent={'Read'}/>
-                    <Texts textContent={`2`} textColor={'success'} textWeight={'boldText'}/>
+                    <Texts textContent={`${readBooks.length}`} textColor={'success'} textWeight={'boldText'}/>
                 </div>
 
                 <div className="statsElement">
                     <Texts textContent={'Currently reading'}/>
-                    <Texts textContent={'2'} textColor={'success'} textWeight={'boldText'}/>
+                    <Texts textContent={`${readingBooks.length}`} textColor={'success'} textWeight={'boldText'}/>
                 </div>
 
                 <div className="statsElement">
                     <Texts textContent={'Want to read'}/>
-                    <Texts textContent={'2'} textColor={'success'} textWeight={'boldText'}/>
+                    <Texts textContent={`${wantReadBooks.length}`} textColor={'success'} textWeight={'boldText'}/>
                 </div>
 
                 <div className="statsElement">
                     <Texts textContent={'Want to share'}/>
-                    <Texts textContent={'2'} textColor={'success'} textWeight={'boldText'}/>
+                    <Texts textContent={'X'} textColor={'success'} textWeight={'boldText'}/>
                 </div>
 
             </div>

@@ -25,7 +25,7 @@ const UserBookCatalogElement = props => {
                     </div>
                     <div>
                         <Texts  textContent={'Your status'} />
-                        <Button buttonText={'Change status'} />
+                        <Button buttonText={'Change status'} buttonSize={'large'}  />
                     </div>                        
                 </div>
             </div>

@@ -16,7 +16,8 @@ const Button = props => {
     'medium': props.buttonSize === 'medium',
     'large': props.buttonSize === 'large',
     'fullWidth': props.buttonSize === 'fullWidth'
-  } )  
+  },
+  )  
 
   return (
     <button className={buttonStyles} onClick={()=>props.handleClick()} >

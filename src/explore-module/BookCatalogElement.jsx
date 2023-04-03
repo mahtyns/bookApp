@@ -33,11 +33,13 @@ const BookCatalogElement = props => {
                     <Button 
                       buttonColor={'confirm'} 
                       buttonText={'Add to your library'} 
-                      handleClick={()=>props.addBookToLibrary(props.bookDetails)}
+                      buttonSize={'large'}
+                      handleClick={() => props.addSetBookStatus(props.bookDetails)}
                 />
                     <Button 
                     buttonText={'Learn more'}
-                    buttonColor={'inactive'}/>
+                    buttonColor={'inactive'}
+                    buttonSize={'large'}/>
                 </div>
             </div>
         </div>

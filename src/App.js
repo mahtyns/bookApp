@@ -6,7 +6,7 @@ import { UserLoginContext } from './contexts/LoginContext'
 
 function App() {
 
-  const [isLogged, setLogged] = useState(false)
+  const [isLogged, setLogged] = useState(true)
  
 
   return (

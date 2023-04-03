@@ -14,7 +14,6 @@ import ExplorePage from './pages/ExplorePage'
 import { UserLibContext } from './contexts/BookContext'
 import { UserLoginContext } from './contexts/LoginContext'
 
-
 const MainRoutes = props => {
 
   const {isLogged} = useContext(UserLoginContext);
@@ -22,15 +21,16 @@ const MainRoutes = props => {
   const [userLibrary, setUserLibrary] = useState([]);
 
 
-  if (!isLogged)
-  return (
-      <Routes>
-        <Route path='/' element={<LoginPage moduleContent={<LoginModule />}/>} />
-        <Route path='/login' element={<LoginPage moduleContent={<LoginModule />}/>} />
-        <Route path='/register' element={<LoginPage moduleContent={<RegisterModule />}/>} />
-      </Routes>
-  )
 
+  if (!isLogged)
+    { 
+      return (
+          <Routes>
+            <Route path='/' element={<LoginPage moduleContent={<LoginModule />}/>} />
+            <Route path='/login' element={<LoginPage moduleContent={<LoginModule />}/>} />
+            <Route path='/register' element={<LoginPage moduleContent={<RegisterModule />}/>} />
+          </Routes>)
+    }
   if (isLogged)
   return  (
      <>
