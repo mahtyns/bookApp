@@ -12,7 +12,7 @@ import FriendsPage from './pages/FriendsPage'
 import BookMapPage from './pages/BookMapPage'
 import ExplorePage from './pages/ExplorePage'
 import { UserLibContext } from './contexts/BookContext'
-import { UserLoginContext } from './contexts/LoginContext'
+import { UserLoginContext } from './contexts/UserSettingsContext'
 
 const MainRoutes = props => {
 

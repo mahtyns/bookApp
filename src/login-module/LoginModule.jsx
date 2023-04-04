@@ -6,12 +6,12 @@ import Button from '../shared-elements/Button'
 import Texts from '../shared-elements/Texts'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
-import { UserLoginContext } from '../contexts/LoginContext'
+import { UserSettingsContext } from '../contexts/UserSettingsContext'
 import { useNavigate } from 'react-router-dom'
 
 const LoginModule = props => {
 
-  const {setLogged} = useContext(UserLoginContext)
+  const {setLogged} = useContext(UserSettingsContext)
   const navigate = useNavigate();
 
   const handleLogIn = () => {

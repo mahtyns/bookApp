@@ -3,7 +3,7 @@ import ProfilePicture from './ProfilePicture'
 import SearchBar from './SearchBar'
 import { Link } from 'react-router-dom'
 import Texts from '../Texts'
-import { UserLoginContext } from '../../contexts/LoginContext'
+import { UserLoginContext } from '../../contexts/UserSettingsContext'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 

@@ -1,12 +1,12 @@
 import Texts from "../../shared-elements/Texts"
-import { UserLoginContext } from '../../contexts/LoginContext'
+import { UserSettingsContext } from '../../contexts/UserSettingsContext'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
 const AboutYou = () => {
 
-  const {setLogged} = useContext(UserLoginContext)
+  const {setLogged} = useContext(UserSettingsContext)
   const navigate = useNavigate()
 
   const handleLogOut = () => {
