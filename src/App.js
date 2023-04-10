@@ -2,7 +2,7 @@ import {ReactQueryDevtools} from 'react-query/devtools'
 import MainRoutes from './MainRoutes';
 import { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom'
-import { UserSettingsContext } from './contexts/UserSettingsContext'
+import { UserSettingsContext } from './contexts/UserSettingsContext';
 
 function App() {
 

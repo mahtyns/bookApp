@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react'
 import Footer from './shared-elements/Footer'
 import Header from './shared-elements/Header'
 import MainPage from './pages/MainPage'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 import UserProfilePage from './pages/UserProfilePage'
 import LoginPage from './pages/LoginPage'
 import LoginModule from './login-module/LoginModule'
@@ -12,11 +12,11 @@ import FriendsPage from './pages/FriendsPage'
 import BookMapPage from './pages/BookMapPage'
 import ExplorePage from './pages/ExplorePage'
 import { UserLibContext } from './contexts/BookContext'
-import { UserLoginContext } from './contexts/UserSettingsContext'
+import { UserSettingsContext } from './contexts/UserSettingsContext'
 
 const MainRoutes = props => {
 
-  const {isLogged} = useContext(UserLoginContext);
+  const {isLogged} = useContext(UserSettingsContext);
 
   const [userLibrary, setUserLibrary] = useState([]);
 
@@ -31,13 +31,13 @@ const MainRoutes = props => {
             <Route path='/register' element={<LoginPage moduleContent={<RegisterModule />}/>} />
           </Routes>)
     }
-  if (isLogged)
+  if (isLogged) 
   return  (
      <>
      <UserLibContext.Provider value={{userLibrary, setUserLibrary}} >
             <Header /> 
               <Routes>
-                  <Route path='/home' element={<MainPage />} />
+                  <Route path='/' element={<MainPage />} />
                   <Route path='/user' element={<UserProfilePage />} />
                   <Route path='/library' element={<BookLibraryPage userLibrary={userLibrary} />} />
                   <Route path='/bookmap' element={<BookMapPage />} />
@@ -48,6 +48,7 @@ const MainRoutes = props => {
       </UserLibContext.Provider>
     </>
   )
+  
 }
 
 export default MainRoutes

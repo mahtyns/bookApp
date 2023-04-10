@@ -3,13 +3,13 @@ import ProfilePicture from './ProfilePicture'
 import SearchBar from './SearchBar'
 import { Link } from 'react-router-dom'
 import Texts from '../Texts'
-import { UserLoginContext } from '../../contexts/UserSettingsContext'
+import { UserSettingsContext } from '../../contexts/UserSettingsContext'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const SideMenu = (props) => {
 
-    const {setLogged} = useContext(UserLoginContext)
+    const {setLogged} = useContext(UserSettingsContext)
 
     const navigate = useNavigate()
 
