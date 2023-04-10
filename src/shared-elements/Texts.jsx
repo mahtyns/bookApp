@@ -28,7 +28,7 @@ const Texts = props => {
   })
     
   return (
-    <div className={textStyles} onClick={()=>props.handleClick()}>
+    <div className={textStyles} >
         {props.textContent}        
     </div>
   )

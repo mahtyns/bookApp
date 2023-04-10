@@ -204,3 +204,8 @@ a:visited {
   gap: 15px;
   margin-top: 50px;
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}

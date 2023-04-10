@@ -28,11 +28,7 @@ const BookCatalog = props => {
 
     const addSetBookStatus = (book) => {
         setPopupOpen(!isPopupOpen);
-        setAddedBook({
-            ...book,
-            status: `${bookStatus}`
-        })
-        console.log(addedBook)
+        setAddedBook(book)
     }
 
     const addBookToLibrary = (book) => {
@@ -40,7 +36,7 @@ const BookCatalog = props => {
             setUserLibrary([
                 ...userLibrary, {
                     ...book,
-                    status: 'read'
+                    status: bookStatus
                 }
             ])
         } else 
