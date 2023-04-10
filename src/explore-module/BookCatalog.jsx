@@ -7,8 +7,7 @@ import AddBookPopup from './components/AddBookPopup'
 
 const BookCatalog = props => {
 
-    const {userLibrary} = useContext(UserLibContext)
-    const {setUserLibrary} = useContext(UserLibContext)
+    const {userLibrary, setUserLibrary} = useContext(UserLibContext)
     const [isPopupOpen,
         setPopupOpen] = useState(false)
     const [addedBook,
