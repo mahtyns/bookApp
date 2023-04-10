@@ -14,7 +14,7 @@ const BookCatalog = props => {
     const [addedBook,
         setAddedBook] = useState(null)
     const [bookStatus,
-        setBookStatus] = useState(null)
+        setBookStatus] = useState('default')
 
     const checkIfExists = (index) => {
         const isRepeatedItem = userLibrary.find(element => element.id === index)

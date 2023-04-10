@@ -11,7 +11,8 @@ const AddBookPopup = (props) => {
                     textWeight={'boldText'}/>
                 <Texts textContent={'Choose the book status:'} textSize={'medium'}/>
             </div>
-            <select id="book-status" onChange={props.handleStatusSelect}>
+            <select id="book-status" onChange={props.handleStatusSelect} value={'default'}>
+                <option value={'default'} disabled>Choose an option</option>
                 <option value={'reading'}>Currently reading</option>
                 <option value={'read'}>Already read</option>
                 <option value={'wtr'}>Want to read</option>
