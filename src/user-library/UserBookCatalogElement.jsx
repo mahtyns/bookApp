@@ -45,7 +45,10 @@ const UserBookCatalogElement = props => {
                                 <Texts textContent={getBookStatus(props.bookDetails.status)} textColor={'alert'} textWeight={'boldText'}/>
                             ) : <Texts textContent={'Error'}/>}
                         </div>
+                        <div className='flex-row'> 
                         <Button buttonText={'Change status'} buttonSize={'large'}/>
+                        <Texts textContent={'Remove...'} textColor={'inactive'}/>
+                        </div>
                     </div>                
                 </div>
                 </div>
