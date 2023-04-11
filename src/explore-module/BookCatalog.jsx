@@ -1,17 +1,15 @@
 import BookCatalogElement from './BookCatalogElement'
 import '.././styles/ExploreBooksCatalogStyles.css'
-import {useContext, useState} from 'react'
-import {UserLibContext} from '../contexts/BookContext'
+import { useContext, useState, useRef } from 'react'
+import { UserLibContext } from '../contexts/BookContext'
 
 import AddBookPopup from './components/AddBookPopup'
 
 const BookCatalog = props => {
 
-    const {userLibrary, setUserLibrary} = useContext(UserLibContext)
-    const [isPopupOpen,
-        setPopupOpen] = useState(false)
-    const [addedBook,
-        setAddedBook] = useState(null)
+    const { userLibrary, setUserLibrary } = useContext(UserLibContext)
+    const [isPopupOpen, setPopupOpen] = useState(false)
+    const addedBook = useRef(null)
     const [bookStatus,
         setBookStatus] = useState('default')
 
@@ -27,7 +25,7 @@ const BookCatalog = props => {
 
     const addSetBookStatus = (book) => {
         setPopupOpen(!isPopupOpen);
-        setAddedBook(book)
+        addedBook.current = book
     }
 
     const addBookToLibrary = (book) => {
@@ -38,8 +36,9 @@ const BookCatalog = props => {
                     status: bookStatus
                 }
             ])
-        } else 
+        } else
             console.log('This item is already in your library')
+        setPopupOpen(!isPopupOpen)
     }
 
     return (
@@ -49,12 +48,12 @@ const BookCatalog = props => {
                 .map(bookDet => <BookCatalogElement
                     addSetBookStatus={addSetBookStatus}
                     key={bookDet.id}
-                    bookDetails={bookDet}/>)}
+                    bookDetails={bookDet} />)}
             {isPopupOpen && <AddBookPopup
                 setPopupOpen={setPopupOpen}
                 addBookToLibrary={addBookToLibrary}
-                book={addedBook}
-                handleStatusSelect={handleStatusSelect}/>}
+                book={addedBook.current}
+                handleStatusSelect={handleStatusSelect} />}
         </div>
     )
 }

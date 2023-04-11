@@ -5,6 +5,7 @@
     text-transform: uppercase;
     border-radius: 6px;
     cursor: pointer;
+    margin: .2em 0;
 }
 
 .buttonMain.large {

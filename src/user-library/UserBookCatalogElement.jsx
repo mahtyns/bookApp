@@ -23,6 +23,7 @@ const UserBookCatalogElement = props => {
     return (
         <div className='userBookCatalogElemContainer'>
             <div className="userBookWrapper">
+                <div className='flex-row'>
                 <div className="userBooksMiniature">
                     <img src={props.bookDetails.image_url} alt={props.bookDetails.title}/>
                 </div>
@@ -45,6 +46,28 @@ const UserBookCatalogElement = props => {
                             ) : <Texts textContent={'Error'}/>}
                         </div>
                         <Button buttonText={'Change status'} buttonSize={'large'}/>
+                    </div>                
+                </div>
+                </div>
+                <div className='flex-row'>
+                    <div className='userBooksStatus-right'>
+                        <div>
+                            <Texts
+                                textContent={'Your rating:'}
+                                textSize={'large'}
+                                textWeight={'boldText'} />
+                            <Texts
+                                textContent={'General rating:'}
+                                textSize={'medium'}
+                                textColor={'inactive'} />
+                        </div>
+                        <div className='userBooksStatus-right'>
+                            <div className='flex-row'>
+                                <Texts textContent={'Currently '} />
+                                <Texts textContent={'not sharing'} />
+                            </div>
+                            <Button buttonText={'Share'} buttonSize={'large'} buttonColor={'confirm'}/>
+                        </div> 
                     </div>
                 </div>
             </div>
