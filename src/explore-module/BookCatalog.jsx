@@ -1,6 +1,6 @@
 import BookCatalogElement from './BookCatalogElement'
 import '.././styles/ExploreBooksCatalogStyles.css'
-import { useContext, useState, useRef } from 'react'
+import { useContext, useState, useRef, useCallback } from 'react'
 import { UserLibContext } from '../contexts/BookContext'
 
 import AddBookPopup from './components/AddBookPopup'
@@ -10,30 +10,32 @@ const BookCatalog = props => {
     const { userLibrary, setUserLibrary } = useContext(UserLibContext)
     const [isPopupOpen, setPopupOpen] = useState(false)
     const addedBook = useRef(null)
-    const [bookStatus,
-        setBookStatus] = useState('default')
+    const bookStatus = useRef(null)
 
     const checkIfExists = (index) => {
         const isRepeatedItem = userLibrary.find(element => element.id === index)
         return isRepeatedItem
     }
 
-    const handleStatusSelect = (event) => {
-        setBookStatus(event.target.value)
-        console.log(event.target.value)
-    }
+    const handleStatusSelect = useCallback(
+        (event) => { bookStatus.current = event.target.value },
+        []
+    )
 
-    const addSetBookStatus = (book) => {
-        setPopupOpen(!isPopupOpen);
-        addedBook.current = book
-    }
+    const addSetBookStatus = useCallback(
+        (book) => {
+            setPopupOpen(!isPopupOpen);
+            addedBook.current = book
+        }, [isPopupOpen]
+    )
 
     const addBookToLibrary = (book) => {
         if (!checkIfExists(book.id)) {
             setUserLibrary([
                 ...userLibrary, {
                     ...book,
-                    status: bookStatus
+                    status: bookStatus.current,
+                    sharing: false
                 }
             ])
         } else

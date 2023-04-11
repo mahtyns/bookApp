@@ -42,7 +42,7 @@ const UserBookCatalogElement = props => {
                         <div className='flex-row'>
                             <Texts textContent={'Your status: '}/>
                             {props.bookDetails.status ? (
-                                <Texts textContent={getBookStatus(props.bookDetails.status)} />
+                                <Texts textContent={getBookStatus(props.bookDetails.status)} textColor={'alert'} textWeight={'boldText'}/>
                             ) : <Texts textContent={'Error'}/>}
                         </div>
                         <Button buttonText={'Change status'} buttonSize={'large'}/>
@@ -61,10 +61,11 @@ const UserBookCatalogElement = props => {
                                 textSize={'medium'}
                                 textColor={'inactive'} />
                         </div>
+                        {/* UI Part to share books with other users  */}
                         <div className='userBooksStatus-right'>
                             <div className='flex-row'>
                                 <Texts textContent={'Currently '} />
-                                <Texts textContent={'not sharing'} />
+                                <Texts textContent={props.bookDetails.sharing ? 'sharing' : 'not sharing'} textColor={'alert'} textWeight={'boldText'} />
                             </div>
                             <Button buttonText={'Share'} buttonSize={'large'} buttonColor={'confirm'}/>
                         </div> 
