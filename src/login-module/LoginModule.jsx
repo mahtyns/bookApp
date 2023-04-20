@@ -16,7 +16,7 @@ const LoginModule = props => {
 
   const handleLogIn = () => {
     setLogged(true)
-    navigate('/home')
+    navigate('/')
   }
  
   return (

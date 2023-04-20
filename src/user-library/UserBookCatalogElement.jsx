@@ -24,54 +24,58 @@ const UserBookCatalogElement = props => {
         <div className='userBookCatalogElemContainer'>
             <div className="userBookWrapper">
                 <div className='flex-row'>
-                <div className="userBooksMiniature">
-                    <img src={props.bookDetails.image_url} alt={props.bookDetails.title}/>
-                </div>
-                <div className='userBooksStatus'>
-                    <div>
-                        <Texts
-                            textContent={props.bookDetails.title}
-                            textSize={'large'}
-                            textWeight={'boldText'}/>
-                        <Texts
-                            textContent={props.bookDetails.authors}
-                            textSize={'medium'}
-                            textColor={'inactive'}/>
+                    <div className="userBooksMiniature">
+                        <img src={props.bookDetails.image_url} alt={props.bookDetails.title}/>
                     </div>
-                    <div>
-                        <div className='flex-row'>
-                            <Texts textContent={'Your status: '}/>
-                            {props.bookDetails.status ? (
-                                <Texts textContent={getBookStatus(props.bookDetails.status)} textColor={'alert'} textWeight={'boldText'}/>
-                            ) : <Texts textContent={'Error'}/>}
+                    <div className='userBooksStatus'>
+                        <div>
+                            <Texts
+                                textContent={props.bookDetails.title}
+                                textSize={'large'}
+                                textWeight={'boldText'}/>
+                            <Texts
+                                textContent={props.bookDetails.authors}
+                                textSize={'medium'}
+                                textColor={'inactive'}/>
                         </div>
-                        <div className='flex-row'> 
-                        <Button buttonText={'Change status'} buttonSize={'large'}/>
-                        <Texts textContent={'Remove...'} textColor={'inactive'}/>
+                        <div>
+                            <div className='flex-row'>
+                                <Texts textContent={'Your status: '}/> {props.bookDetails.status
+                                    ? (<Texts
+                                        textContent={getBookStatus(props.bookDetails.status)}
+                                        textColor={'alert'}
+                                        textWeight={'boldText'}/>)
+                                    : <Texts textContent={'Error'}/>}
+                            </div>
+                            <div className='flex-row'>
+                                <Button buttonText={'Change status'} buttonSize={'large'}/>
+                                <Button buttonText={'Remove...'} buttonSize={'large'} buttonColor={'text'}/>
+                            </div>
                         </div>
-                    </div>                
-                </div>
+                    </div>
                 </div>
                 <div className='flex-row'>
                     <div className='userBooksStatus-right'>
                         <div>
-                            <Texts
-                                textContent={'Your rating:'}
-                                textSize={'large'}
-                                textWeight={'boldText'} />
+                            <Texts textContent={'Your rating:'} textSize={'large'} textWeight={'boldText'}/>
                             <Texts
                                 textContent={'General rating:'}
                                 textSize={'medium'}
-                                textColor={'inactive'} />
+                                textColor={'inactive'}/>
                         </div>
                         {/* UI Part to share books with other users  */}
                         <div className='userBooksStatus-right'>
                             <div className='flex-row'>
-                                <Texts textContent={'Currently '} />
-                                <Texts textContent={props.bookDetails.sharing ? 'sharing' : 'not sharing'} textColor={'alert'} textWeight={'boldText'} />
+                                <Texts textContent={'Currently '}/>
+                                <Texts
+                                    textContent={props.bookDetails.sharing
+                                    ? 'sharing'
+                                    : 'not sharing'}
+                                    textColor={'alert'}
+                                    textWeight={'boldText'}/>
                             </div>
                             <Button buttonText={'Share'} buttonSize={'large'} buttonColor={'confirm'}/>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>

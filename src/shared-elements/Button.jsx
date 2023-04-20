@@ -10,6 +10,7 @@ const Button = props => {
     'confirm': props.buttonColor === 'confirm',
     'inactive': props.buttonColor === 'inactive',
     'danger': props.buttonColor === 'danger',
+    'textOnly': props.buttonColor === 'text'
   },
   {
     'small': props.buttonSize === 'small',

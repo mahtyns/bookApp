@@ -1,7 +1,7 @@
-import Texts from "../../shared-elements/Texts"
 import { UserSettingsContext } from '../../contexts/UserSettingsContext'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Button from '../../shared-elements/Button'
 
 
 const AboutYou = () => {
@@ -16,7 +16,7 @@ const AboutYou = () => {
 
   return (
     <div> 
-        <Texts textContent={'Log Out'} textSize={'medium'} textColor={'inactive'} handleClick={()=>handleLogOut()}/>
+        <Button buttonColor={'text'} buttonText={'Log out'} handleClick={handleLogOut}/>
     </div>
   )
 }
