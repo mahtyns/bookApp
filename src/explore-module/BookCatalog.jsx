@@ -30,7 +30,7 @@ const BookCatalog = props => {
     )
 
     const addBookToLibrary = (book) => {
-        if (!checkIfExists(book.id)) {
+        if (!checkIfExists(book.id) && bookStatus.current) {
             setUserLibrary([
                 ...userLibrary, {
                     ...book,
@@ -50,7 +50,8 @@ const BookCatalog = props => {
                 .map(bookDet => <BookCatalogElement
                     addSetBookStatus={addSetBookStatus}
                     key={bookDet.id}
-                    bookDetails={bookDet} />)}
+                    bookDetails={bookDet}
+                     />)}
             {isPopupOpen && <AddBookPopup
                 setPopupOpen={setPopupOpen}
                 addBookToLibrary={addBookToLibrary}

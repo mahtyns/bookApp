@@ -7,7 +7,17 @@ import SearchBar from '../shared-elements/components/SearchBar'
 
 const UserBookCatalog = props => {
 
-    const {userLibrary} = useContext(UserLibContext)
+    const {userLibrary, setUserLibrary} = useContext(UserLibContext)
+
+    // const handleReadStatusChange = (book) => {
+
+    // }
+
+    const handleSharingStatusChange = (shareBook) => {
+        // Share the book with other users
+        const sharedBook = userLibrary.findIndex(element => element.id === shareBook.id);
+        setUserLibrary(userLibrary.map((book, index) => index === sharedBook ? {...shareBook, sharing: true} : book))
+    }
 
     return (
 
@@ -24,7 +34,10 @@ const UserBookCatalog = props => {
             </div>
             <div className="userBookList">
                 {userLibrary.length
-                    ? <>{userLibrary.map((book, index) => <UserBookCatalogElement key={index} bookDetails={book} />)}</>
+                    ? <>{userLibrary.map((book, index) => <UserBookCatalogElement 
+                        key={index} 
+                        bookDetails={book} 
+                        handleSharingStatusChange={handleSharingStatusChange}/>)}</>
                     : <Texts
                         textSize={'large'}
                         textContent={'You have no books added to your library.'}
