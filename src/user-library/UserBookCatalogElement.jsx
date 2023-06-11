@@ -47,7 +47,7 @@ const UserBookCatalogElement = props => {
                         </div>
                         <div className='flex-row userChangeStatusRemove'> 
                         <Button buttonText={'Change status'} buttonSize={'large'}/>
-                        <Texts textContent={'Remove...'} textColor={'inactive'}/>
+                        <Button buttonText={'Remove...'} buttonSize={'large'} buttonColor={'textOnly'} handleClick={()=>props.handleRemove(props.bookDetails)}/>
                         </div>
                     </div>                
                 </div>

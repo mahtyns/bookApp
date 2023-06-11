@@ -16,7 +16,12 @@ const UserBookCatalog = props => {
     const handleSharingStatusChange = (shareBook) => {
         // Share the book with other users
         const sharedBook = userLibrary.findIndex(element => element.id === shareBook.id);
-        setUserLibrary(userLibrary.map((book, index) => index === sharedBook ? {...shareBook, sharing: true} : book))
+        setUserLibrary(userLibrary.map((book, index) => index === sharedBook ? {...shareBook, sharing: !book.sharing} : book))
+    }
+
+    const handleRemove = (clickedBook) => {
+        setUserLibrary(userLibrary.filter((element) => element.id !== clickedBook.id))
+        
     }
 
     return (
@@ -37,7 +42,8 @@ const UserBookCatalog = props => {
                     ? <>{userLibrary.map((book, index) => <UserBookCatalogElement 
                         key={index} 
                         bookDetails={book} 
-                        handleSharingStatusChange={handleSharingStatusChange}/>)}</>
+                        handleSharingStatusChange={handleSharingStatusChange}
+                        handleRemove={handleRemove}/>)}</>
                     : <Texts
                         textSize={'large'}
                         textContent={'You have no books added to your library.'}

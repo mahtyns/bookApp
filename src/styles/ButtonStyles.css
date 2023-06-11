@@ -27,6 +27,11 @@
     color: var(--inactive)
 }
 
+.buttonMain.textOnly {
+    background-color: transparent;
+    color: var(--inactive);
+}
+
 .fullWidth {
     width: 100%;
     font-size: 18px;
