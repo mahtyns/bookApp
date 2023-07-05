@@ -1,8 +1,12 @@
 import Texts from '../shared-elements/Texts'
 import '.././styles/ExploreBooksCatalogStyles.css'
 import Button from '../shared-elements/Button'
+import AddBookPopup from './components/AddBookPopup'
+import { useState } from 'react'
 
 const BookCatalogElement = props => {   
+
+    const [selectedBookID, setSelectedBookID] = useState(-1)
 
     return (
         <div className='bookElementContainer'>
@@ -30,12 +34,24 @@ const BookCatalogElement = props => {
                     textSize={'small'}
                     textColor={'inactive'}/>
                 <div className='catalog-buttons'>
+                    <div className='addLibButton'>
                     <Button 
                       buttonColor={'confirm'} 
                       buttonText={'Add to your library'} 
                       buttonSize={'large'}
-                      handleClick={() => props.addSetBookStatus(props.bookDetails)}
+                      handleClick={() => {
+                        props.addSetBookStatus(props.bookDetails)
+                        setSelectedBookID(props.bookDetails.id)    
+                    }}                      
                 />
+                    {props.isPopupOpen && selectedBookID === props.bookDetails.id && (<AddBookPopup 
+                    book={props.bookDetails} 
+                    addBookToLibrary={props.addBookToLibrary}
+                    handleStatusSelect={props.handleStatusSelect}
+                    setPopupOpen={props.setPopupOpen}
+                    checkIfExists={props.checkIfExists}/>
+                    )}
+                    </div>
                     <Button 
                     buttonText={'Learn more'}
                     buttonColor={'inactive'}

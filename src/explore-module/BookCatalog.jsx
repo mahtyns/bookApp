@@ -3,7 +3,7 @@ import '.././styles/ExploreBooksCatalogStyles.css'
 import { useContext, useState, useRef, useCallback } from 'react'
 import { UserLibContext } from '../contexts/BookContext'
 
-import AddBookPopup from './components/AddBookPopup'
+// import AddBookPopup from './components/AddBookPopup'
 
 const BookCatalog = props => {
 
@@ -25,7 +25,7 @@ const BookCatalog = props => {
     const addSetBookStatus = useCallback(
         (book) => {
             setPopupOpen(!isPopupOpen);
-            addedBook.current = book
+            addedBook.current = book;
         }, [isPopupOpen]
     )
 
@@ -51,12 +51,17 @@ const BookCatalog = props => {
                     addSetBookStatus={addSetBookStatus}
                     key={bookDet.id}
                     bookDetails={bookDet}
+                    isPopupOpen={isPopupOpen}
+                    addBookToLibrary={addBookToLibrary}
+                    handleStatusSelect={handleStatusSelect}
+                    setPopupOpen={setPopupOpen}
+                    checkIfExists={checkIfExists}
                      />)}
-            {isPopupOpen && <AddBookPopup
+            {/* {isPopupOpen && <AddBookPopup
                 setPopupOpen={setPopupOpen}
                 addBookToLibrary={addBookToLibrary}
                 book={addedBook.current}
-                handleStatusSelect={handleStatusSelect} />}
+                handleStatusSelect={handleStatusSelect} />} */}
         </div>
     )
 }

@@ -29,6 +29,9 @@ const AddBookPopup = (props) => {
                     buttonColor={'inactive'}
                     handleClick={() => props.setPopupOpen(false)}/>
             </div>
+            {/* <div>
+                {props.checkIfExists(props.book.id) ? <p>*This book is already in your library.</p> : null }              
+            </div> */}
         </div>
     )
 }

@@ -70,3 +70,7 @@
   gap: 1em;
   width: 50%;
 }
+
+.addLibButton {
+  position: relative;
+}
