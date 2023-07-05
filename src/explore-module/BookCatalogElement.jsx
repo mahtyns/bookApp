@@ -34,27 +34,36 @@ const BookCatalogElement = props => {
                     textSize={'small'}
                     textColor={'inactive'}/>
                 <div className='catalog-buttons'>
-                    <div className='addLibButton'>
-                    <Button 
-                      buttonColor={'confirm'} 
-                      buttonText={'Add to your library'} 
-                      buttonSize={'large'}
-                      handleClick={() => {
-                        props.addSetBookStatus(props.bookDetails)
-                        setSelectedBookID(props.bookDetails.id)    
-                    }}                      
-                />
-                    {props.isPopupOpen && selectedBookID === props.bookDetails.id && (<AddBookPopup 
-                    book={props.bookDetails} 
-                    addBookToLibrary={props.addBookToLibrary}
-                    handleStatusSelect={props.handleStatusSelect}
-                    setPopupOpen={props.setPopupOpen}
-                    checkIfExists={props.checkIfExists}/>
-                    )}
-                    </div>
+                    {props.checkIfExists(props.bookDetails.id) ? 
+                    (<Button 
+                        buttonColor={'inactive'}
+                        buttonSize={'large'}
+                        buttonText={'In your library'}
+                        handleClick={()=>console.log("The book is in your library")}
+                     />) : 
+                    (<div className='addLibButton'>
+                        <Button
+                            buttonColor={'confirm'}
+                            buttonText={'Add to your library'}
+                            buttonSize={'large'}
+                            handleClick={() => {
+                                props.addSetBookStatus(props.bookDetails)
+                                setSelectedBookID(props.bookDetails.id)
+                            }}
+                        />
+                        {props.isPopupOpen && selectedBookID === props.bookDetails.id && (<AddBookPopup
+                            book={props.bookDetails}
+                            addBookToLibrary={props.addBookToLibrary}
+                            handleStatusSelect={props.handleStatusSelect}
+                            setPopupOpen={props.setPopupOpen}
+                            setSelectedBookID={setSelectedBookID}
+                        />
+                        )}
+                    </div>) }
+                    
                     <Button 
                     buttonText={'Learn more'}
-                    buttonColor={'inactive'}
+                    buttonColor={'textOnly'}
                     buttonSize={'large'}/>
                 </div>
             </div>
