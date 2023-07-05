@@ -152,6 +152,5 @@
 
 .userChangeStatusRemove {
     margin-top: .2em;
-    width: 62%;
-    justify-content: space-between;
+    gap: .2em
 }

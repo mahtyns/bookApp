@@ -13,6 +13,7 @@ const UserStats = props => {
     const readBooks = userLibrary.filter((element) => element.status === 'read')
     const wantReadBooks = userLibrary.filter((element) => element.status === 'wtr')
     const readingBooks = userLibrary.filter((element) => element.status === 'reading')
+    const sharingBooks = userLibrary.filter((element) => element.sharing )
 
     return (
         <div className='userStatsContainer'>
@@ -47,7 +48,7 @@ const UserStats = props => {
 
                 <div className="statsElement">
                     <Texts textContent={'Want to share'}/>
-                    <Texts textContent={'X'} textColor={'success'} textWeight={'boldText'}/>
+                    <Texts textContent={`${sharingBooks.length}`} textColor={'success'} textWeight={'boldText'}/>
                 </div>
 
             </div>
