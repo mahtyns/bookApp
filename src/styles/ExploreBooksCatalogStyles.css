@@ -31,11 +31,11 @@
   object-fit: contain;
 }
 
-.catalog-buttons {
+.catalogButtons {
   display: flex;
   gap: 1em;
   position: relative;
-  ;
+  margin: 1em 0;
 }
 
 /* Add to your library popup  */
@@ -73,4 +73,14 @@
 
 .addLibButton {
   position: relative;
+}
+
+.bookElDescriptionContainer {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* number of lines to show */
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  margin: 1em 0;
 }

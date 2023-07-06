@@ -11,6 +11,8 @@ const BookCatalog = props => {
     const [isPopupOpen, setPopupOpen] = useState(false)
     const addedBook = useRef(null)
     const bookStatus = useRef(null)
+    //Slice the book array so that only first n books show
+    const sliceNum = 8
 
     const checkIfExists = (index) => {
         const isRepeatedItem = userLibrary.find(element => element.id === index)
@@ -47,6 +49,7 @@ const BookCatalog = props => {
         <div className='bookCatalogContainer'>
             {props
                 .bookDetails
+                .slice(0,sliceNum)
                 .map(bookDet => <BookCatalogElement
                     addSetBookStatus={addSetBookStatus}
                     key={bookDet.id}

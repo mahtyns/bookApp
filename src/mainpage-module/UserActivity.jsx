@@ -13,7 +13,7 @@ const UserActivity = () => {
         <div>
               <h3>Your latest activity</h3>
         </div>
-        <LatestBookActivity lastBook={userLibrary[lastBookInd]} />
+      { userLibrary.length !== 0 && <LatestBookActivity lastBook={userLibrary[lastBookInd]} />   }
 
 
     </div>

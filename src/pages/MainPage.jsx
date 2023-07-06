@@ -10,7 +10,7 @@ const MainPage = () => {
     <Containers containerRight_Content={null} 
     titleSectionRight={'Welcome back'} 
     titleSectionLeft={'Your books'} 
-    // containerLeft_Content={<UserActivity />} 
+    containerLeft_Content={<UserActivity />} 
     />
   )
 }

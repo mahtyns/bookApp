@@ -33,7 +33,7 @@ const BookCatalogElement = props => {
                     textContent={`Genres: ${props.bookDetails.genres}`}
                     textSize={'small'}
                     textColor={'inactive'}/>
-                <div className='catalog-buttons'>
+                <div className='catalogButtons'>
                     {props.checkIfExists(props.bookDetails.id) ? 
                     (<Button 
                         buttonColor={'inactive'}
